@@ -1,1 +1,6 @@
-# dinbyggare
+# dinbyggare     
+      
+## Run localhost     
+```
+http-server .
+```

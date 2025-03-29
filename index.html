@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="swe">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dinbyggare</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+
+    <body>
+        <!-- Buttons -->
+        <div class="button-container">
+            <button onclick="goHome()">HOME</button>
+            <button onclick="goAboutUs()">OM OSS</button>
+            <button onclick="goContact()">KONTAKT</button>
+        </div>
+
+        <!-- Company slogans -->
+        <h1 class="title">BYGGARE J CHRISTENSEN AB</h1>
+        <h4 class="slogan">Totalrenovering i Stockholm - Kvalitet från start till mål!</h4>
+        <img src="images/dinbyggare.png" width="1440" style="margin-top: 0px;">
+        <p class="beskrivning">Din totalentreprenör för renovering och byggnation. Vi erbjuder helhetslösningar inom totalrenovering, badrum och entreprenad. 
+           Med gedigen erfarenhet och noggrannhet levererar vi högkvalitativa resultat. Låt oss förverkliga dina byggdrömmar - från idé till färdigt projekt.</p>
+
+        <h3 class="instagram-header">Tidigare arbeten</h3>
+
+        <!-- Image Slideshow -->
+        <div class="image_slideshow">
+            <!-- Sidebar -->
+            <div class="categories">
+                <button onclick="showImages('bathroom')">Badrum</button>
+                <button onclick="showImages('kitchen')">Kök</button>
+                <button onclick="showImages('livingroom')">Bilning, rivning</button>
+                <button onclick="showImages('livingroom')">Plattsättning</button>
+                <button onclick="showImages('livingroom')">Fönsterbyte</button>
+                <button onclick="showImages('livingroom')">Totalrenovering</button>
+                <button onclick="showImages('livingroom')">Inredning</button>
+            </div>
+        
+            <!-- Slideshow -->
+            <div class="slideshow">
+                <img id="slideshow-img" src="images/bathroom1.JPEG" alt="Slideshow Image">
+                <button class="prev" onclick="prevImage()">❮</button>
+                <button class="next" onclick="nextImage()">❯</button>
+            </div>
+        </div>
+
+        <h3 class="instagram-header">Instagram: byggare.christensen</h3>
+
+
+        
+        <script src="script.js"></script>
+    </body>
+</html>

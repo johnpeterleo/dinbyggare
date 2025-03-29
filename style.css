@@ -1,0 +1,156 @@
+/* Mobile styles (iPhone portrait) */
+@media (max-width: 768px) {
+    .beskrivning {
+      width: 90%; /* Adjust width for mobile */
+      font-size: 18px; /* Smaller text */
+    }
+  
+    .button-container {
+      position: static; /* Avoid absolute positioning */
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .image_slideshow {
+      flex-direction: column; /* Stack sidebar and slideshow */
+    }
+  
+    .categories, .slideshow {
+      width: 100%; /* Full width on mobile */
+    }
+  }
+
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white; 
+}
+  
+.title {
+    color: white;
+    background-color: rgb(147, 22, 22);
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    
+}
+
+.slogan {
+    color: white;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+.beskrivning {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: rgb(176, 33, 33);
+    background-color: #e3dddd; /*  #f4f4f4  */
+    text-align: center;
+    padding: 20px;
+    width: 800px;
+    border-radius: 10px; 
+    line-height: 1.5;
+    margin: 0 auto;
+    margin-top: -5px; 
+
+}
+
+
+h1 {
+    color: #cf6417;  
+}
+
+/* Home page top-right buttons */
+.button-container {
+    display: flex; /* horizontal */
+    justify-content: flex-start;
+    gap: 0px; 
+    position: absolute;
+    top: 10px; 
+    right: 0px; 
+}
+
+button {
+    font-size: 14px !important;
+    padding: 5px 10px;
+    background: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+  
+button:hover {
+    color: white;  
+}
+
+
+.instagram-header {
+    color: rgb(241, 46, 46);  
+    padding: 20px 0;
+    background-color: black;
+    margin-top: 100px; 
+}
+
+
+
+/*Slideshow*/
+.image_slideshow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories {
+    width: 20%; /* Sidebar width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+button {
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.slideshow {
+    width: 75%; /* Slideshow width */
+    text-align: center;
+    position: relative;
+}
+
+#slideshow-img {
+    width: 50%; /* Full width of the slideshow container */
+    height: auto;
+    max-width: 100%;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
