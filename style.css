@@ -4,9 +4,9 @@
 @font-face {
     font-family: 'Brush Script MT Custom'; 
     src: 
-      url('brush-script/brush-script.woff2') format('woff2'), 
-      url('brush-script/brush-script.woff') format('woff'),   
-      url('brush-script/brush-script.ttf') format('truetype');
+      url('brush-script/BrushScript.woff2') format('woff2'), 
+      url('brush-script/BrushScript.woff') format('woff'),   
+      url('brush-script/BRS.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap; /* Prevents invisible text during loading */
