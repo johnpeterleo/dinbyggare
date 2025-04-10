@@ -1531,7 +1531,7 @@ body, html {
 /* Tablet styles (769-1024px)  */
 @media (min-width: 769px) and (max-width: 1024px) {
     .title{ 
-        font-size: 8.4vw;
+        font-size: 7vw;
     }
     .slogan {
         font-size: 1.8vw; 
