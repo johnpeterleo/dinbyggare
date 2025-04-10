@@ -1439,7 +1439,7 @@ body, html {
     /* Hamburger menu looks bad otherwise*/
     @media (max-width: 580px) {
         .title{ 
-            font-size: 8.4vw;
+            font-size: 7vw;
         }
         .slogan {
             font-size: 2.7vw; /*increase, hard to read if small width*/
@@ -1598,7 +1598,7 @@ body, html {
         left: 1vw;
     }
     .title {
-        font-size: 8vw;
+        font-size: 7.8vw;
     }
     .slogan {
         font-size: 1.7vw;
