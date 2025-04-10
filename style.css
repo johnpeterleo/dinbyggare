@@ -1,6 +1,13 @@
 /* cursive font for title text */
 @import url('https://fonts.cdnfonts.com/css/brush-script-mt');
-
+@font-face {
+    font-family: 'Brush Script MT';
+    src: url('fonts/BrushScriptMT.woff2') format('woff2'),
+         url('fonts/BrushScriptMT.woff') format('woff'),
+         url('fonts/BrushScriptMT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 /* Hamburger menu styles */
@@ -127,7 +134,7 @@ h1 {
 
 /* Header section: title and slogan */
 .title {
-    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-family: 'Brush Script MT', cursive, sans-serif;
     font-size: 50px;
     color: white;
     background-color: transparent;
