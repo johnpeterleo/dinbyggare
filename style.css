@@ -1,14 +1,16 @@
 /* cursive font for title text */
 @import url('https://fonts.cdnfonts.com/css/brush-script-mt');
+
 @font-face {
-    font-family: 'Brush Script MT';
-    src: url('fonts/BrushScriptMT.woff2') format('woff2'),
-         url('fonts/BrushScriptMT.woff') format('woff'),
-         url('fonts/BrushScriptMT.ttf') format('truetype');
+    font-family: 'Brush Script MT Custom'; 
+    src: 
+      url('brush-script/brush-script.woff2') format('woff2'), 
+      url('brush-script/brush-script.woff') format('woff'),   
+      url('brush-script/brush-script.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-
+    font-display: swap; /* Prevents invisible text during loading */
+  }
 
 /* Hamburger menu styles */
 .hamburger-menu {
@@ -134,7 +136,7 @@ h1 {
 
 /* Header section: title and slogan */
 .title {
-    font-family: 'Brush Script MT', cursive, sans-serif;
+    font-family: 'Brush Script MT Custom', cursive, sans-serif;
     font-size: 50px;
     color: white;
     background-color: transparent;
