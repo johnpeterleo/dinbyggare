@@ -5,25 +5,123 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>dinbyggare</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
 
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Add font for "behörigheter" section -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+    <script src="script.js"></script>
 
     <body>
-        <!-- Buttons -->
-        <div class="button-container">
-            <button onclick="goHome()">HOME</button>
-            <button onclick="goAboutUs()">OM OSS</button>
-            <button onclick="goContact()">KONTAKT</button>
+        <!-- Company slogans -->
+        <div class="title-container">
+            <div class="title-content">
+                <h1 class="title">Byggare J Christensen AB</h1>
+                <img src="images/titlelogo.png" class="title-logo">
+            </div>
+        </div>
+        <h4 class="slogan">Totalrenovering i Stockholm - Kvalitet från start till mål!</h4>
+        
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu">
+            <button class="hamburger-icon" onclick="toggleMenu()">&#9776;</button>
+            <div class="menu" id="menu">
+                <button onclick="goHome()">Hem</button>
+                <button onclick="goAboutUs()">Om oss</button>
+                <button onclick="goContact()">Kontakt</button>
+            </div>
         </div>
 
-        <!-- Company slogans -->
-        <h1 class="title">BYGGARE J CHRISTENSEN AB</h1>
-        <h4 class="slogan">Totalrenovering i Stockholm - Kvalitet från start till mål!</h4>
-        <img src="images/dinbyggare3.png" width="1200" style="margin-top: 0px;">
-        <p> Certifikat, licens, året företaget grundades, punktlista av jobb  </p>
 
 
-        
-        <script src="script.js"></script>
+        <!-- Page title, image and text -->
+        <section class="about-section">
+            <div class="about-container">
+              <!-- Image on the left -->
+              <div class="about-image">
+                <img src="images/dinbyggare2.jpg" alt="Our Team at Work" class="about-img">
+              </div>
+              
+              <!-- Text content on the right -->
+              <div class="about-content">
+                <h1 class="about-title">Om oss</h1>
+                <div class="about-text">
+                    <p>Vårt företag grundades 1993 och har sitt huvudkontor i Nacka. Vi specialiserar oss på totalentreprenad och är med våra kunder genom hela projektet – från grund till tak. Våra tjänster inkluderar byggservice och våtrumsbyggnation inom Stockholmsområdet.</p>  
+                    <p>Med över 30 års erfarenhet i branschen kombinerar vi traditionellt hantverk med modern teknik för att leverera exceptionella resultat.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+        <!-- Behörigheter/certificates Section -->
+        <div class="certificates-container">
+            <p class="certificate-instruction">
+                <span class="instruction-icon">↓</span>
+                <span class="instruction-text">Klicka på logotyperna för att se certifikat</span>
+                <span class="instruction-icon">↓</span>
+            </p>
+            
+            <div class="certificate-badge">
+                <!-- TrueOriginal Badge -->
+                <a href="https://verify.trueoriginal.com/04584667-5EC7-48EB-5EEF-C1D99363B077/?ref=badge" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="certificate-item">
+                    <img src="https://cdn.truecdn.io/cdn/svg/_678a3809f0149-4nts1hbk-sqcs.svg" 
+                        alt="TrueOriginal Verifiering" 
+                        width="200">
+                </a>
+
+                <!-- RISE Report -->
+                <a href="pdf/Report_RISE.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="certificate-item">
+                    <img src="images/RISE-logo.png" 
+                        alt="RISE Certifikat" 
+                        width="155">
+                </a>
+
+                <!-- Schyssta byggare link -->
+                <a href="https://schysstabyggare.se/?s=Byggare+J.+Christensen+AB" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="certificate-item">
+                    <img src="images/Schysst_med_url_dark_grey.png" 
+                        alt="RISE Certifikat" 
+                        width="220">
+                </a>
+            </div>
+        </div>
+
+        <!-- Svenskt Näringsliv and Byggföretagen LOGOS, not clickable -->
+        <!-- Non-clickable member logos -->
+        <div class="member-logos">
+            <img src="images/Svenskt_Näringsliv.png" alt="Svenskt Näringsliv" class="member-logo">
+            <img src="images/byggföretagen_medlem111.png" alt="Byggföretagen" class="member-logo">
+            <img src="images/thumb.jpeg" alt="Byggföretagen" class="member-logo">
+        </div>
+
+        <!-- Remove this later, punktlista-->
+        <img src="images/dinbyggare3.png" width="0" style="margin-top: 0px;">
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <h2 class="footer-title">BYGGARE J CHRISTENSEN AB</h2>
+            <p class="footer-description">
+                Din pålitliga byggpartner i Stockholm. Vi erbjuder totalrenovering, badrum och entreprenad med högsta kvalitet och professionalism.
+            </p>
+            <button class="footer_button" onclick="goHome()">Hem</button>
+            <button class="footer_button" onclick="goAboutUs()">Om oss</button>
+            <button class="footer_button" onclick="goContact()">Kontakt</button>
+            <div class="footer-links">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/dinbyggare/?locale=sv_SE" class="fa fa-facebook" target="_blank"></a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/byggare.christensen/?hl=en" class="fa fa-instagram" target="_blank"></a>
+            </div>
+        </footer>
     </body>
 </html>

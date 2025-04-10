@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - rsync -av --exclude='.cpanel.yml' ./ /home/dinbyggare/

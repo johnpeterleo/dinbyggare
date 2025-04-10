@@ -5,51 +5,240 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>dinbyggare</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Standard Favicon -->
+        <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+        <!-- Manifest -->
+        <link rel="manifest" href="favicons/site.webmanifest"> 
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+        <!-- Android Chrome Icon -->
+        <link rel="icon" sizes="192x192" href="favicons/android-chrome-192x192.png">
+        <!-- Other icon sizes for various devices -->
+        <link rel="icon" sizes="16x16" href="favicons/favicon-16x16.png">
+        <link rel="icon" sizes="32x32" href="favicons/favicon-32x32.png">
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     </head>
+    <script src="script.js"></script>
 
 
     <body>
-        <!-- Buttons -->
-        <div class="button-container">
-            <button onclick="goHome()">HOME</button>
-            <button onclick="goAboutUs()">OM OSS</button>
-            <button onclick="goContact()">KONTAKT</button>
-        </div>
-
         <!-- Company slogans -->
-        <h1 class="title">BYGGARE J CHRISTENSEN AB</h1>
-        <h4 class="slogan">Totalrenovering i Stockholm - Kvalitet från start till mål!</h4>
-        <img src="images/dinbyggare.png" width="1440" style="margin-top: 0px;">
-        <p class="beskrivning">Din totalentreprenör för renovering och byggnation. Vi erbjuder helhetslösningar inom totalrenovering, badrum och entreprenad. 
-           Med gedigen erfarenhet och noggrannhet levererar vi högkvalitativa resultat. Låt oss förverkliga dina byggdrömmar - från idé till färdigt projekt.</p>
-
-        <h3 class="instagram-header">Tidigare arbeten</h3>
-
-        <!-- Image Slideshow -->
-        <div class="image_slideshow">
-            <!-- Sidebar -->
-            <div class="categories">
-                <button onclick="showImages('bathroom')">Badrum</button>
-                <button onclick="showImages('kitchen')">Kök</button>
-                <button onclick="showImages('livingroom')">Bilning, rivning</button>
-                <button onclick="showImages('livingroom')">Plattsättning</button>
-                <button onclick="showImages('livingroom')">Fönsterbyte</button>
-                <button onclick="showImages('livingroom')">Totalrenovering</button>
-                <button onclick="showImages('livingroom')">Inredning</button>
+        <div class="title-container">
+            <div class="title-content">
+                <h1 class="title">Byggare J Christensen AB</h1>
+                <img src="images/titlelogo.png" class="title-logo">
             </div>
+        </div>
+        <h4 class="slogan">Totalrenovering i Stockholm - Kvalitet från start till mål!</h4>
         
-            <!-- Slideshow -->
-            <div class="slideshow">
-                <img id="slideshow-img" src="images/bathroom1.JPEG" alt="Slideshow Image">
-                <button class="prev" onclick="prevImage()">❮</button>
-                <button class="next" onclick="nextImage()">❯</button>
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu">
+            <button class="hamburger-icon" onclick="toggleMenu()">&#9776;</button>
+            <div class="menu" id="menu">
+                <button onclick="goHome()">Hem</button>
+                <button onclick="goAboutUs()">Om oss</button>
+                <button onclick="goContact()">Kontakt</button>
             </div>
         </div>
 
-        <h3 class="instagram-header">Instagram: byggare.christensen</h3>
+        <img src="images/dinbyggare.png" width="1440" style="margin-top: 0px;">
+
+
+
+        <!-- Services introduction, front page text -->
+        <section class="services-intro">
+            <div class="services-content">
+              <h2 class="services-heading">Din specialist för helhetslösningar</h2>
+              <div class="red-divider"></div>
+              <p class="services-lead">
+                <strong>Byggare J Christensen AB</strong> är din totalentreprenör för renovering och nybyggnation. 
+              </p>
+              
+              <ul class="services-highlights">
+                <li>
+                  <span class="icon-container"><i class="fa fa-check-circle"></i></span>
+                  <span class="highlight-text">Med gedigen erfarenhet och noggrannhet levererar vi högkvalitativa resultat</span>
+                </li>
+                <li>
+                  <span class="icon-container"><i class="fa fa-check-circle"></i></span>
+                  <span class="highlight-text">Specialister på totalentreprenad med en kontaktperson från start till mål</span>
+                </li>
+                <li>
+                  <span class="icon-container"><i class="fa fa-check-circle"></i></span>
+                  <span class="highlight-text">Låt oss förverkliga dina byggdrömmar - från idé till färdigt projekt</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+        
+        
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="header-decoration">
+                    <div class="red-line"></div>
+                    <div class="black-line"></div>
+                </div>
+                <h2 class="section-title">Tidigare Projekt</h2>
+                <div class="header-decoration">
+                    <div class="black-line"></div>
+                    <div class="red-line"></div>
+                </div>
+            </div>
+            <p class="section-subtitle">Utforska våra senaste renoveringar och byggprojekt</p>
+
+            <!-- Image Slideshow -->
+            <div class="slideshow-container">
+                <!-- Sidebar Navigation -->
+                <div class="category-nav">
+                    <button class="category-btn active" data-category="bathroom">
+                        <span class="btn-icon">🛁</span>
+                        <span class="btn-text">Badrum</span>
+                    </button>
+                    <button class="category-btn" data-category="kitchen">
+                        <span class="btn-icon">🍴</span>
+                        <span class="btn-text">Kök</span>
+                    </button>
+                    <button class="category-btn" data-category="interior">
+                        <span class="btn-icon">🛋️</span>
+                        <span class="btn-text">Inredning</span>
+                    </button>
+                    <button class="category-btn" data-category="balcony">
+                        <span class="btn-icon">🧱</span>
+                        <span class="btn-text">Altan</span>
+                    </button>
+                    <button class="category-btn" data-category="carpentry">
+                        <span class="btn-icon">🔨</span>
+                        <span class="btn-text">Snickeri</span>
+                    </button>
+                    <button class="category-btn" data-category="renovation">
+                        <span class="btn-icon">🏠</span>
+                        <span class="btn-text">Totalrenovering</span>
+                    </button>
+                    <button class="category-btn" data-category="construction">
+                        <span class="btn-icon">👷‍♂️</span>
+                        <span class="btn-text">Nybyggnation</span>
+                    </button>
+                    <button class="category-btn" data-category="rebuilding">
+                        <span class="btn-icon">🏗️</span>
+                        <span class="btn-text">Ombyggnader</span>
+                    </button>
+                    <button class="category-btn" data-category="flooring">
+                        <span class="btn-icon">🪵</span>
+                        <span class="btn-text">Golv</span>
+                    </button>
+                    <button class="category-btn" data-category="window">
+                        <span class="btn-icon">🚪</span>
+                        <span class="btn-text">Fönster- och dörrbyten</span>
+                    </button>
+                </div>
+                
+                <!-- Slideshow Area -->
+                <div class="slideshow-viewport">
+                    <div class="slideshow-track">
+                        <!-- Slides will be dynamically inserted here -->
+                    </div>
+                    
+                    <!-- Navigation Controls -->
+                    <button class="slideshow-control prev" aria-label="Previous">
+                        <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+                    </button>
+                    <button class="slideshow-control next" aria-label="Next">
+                        <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                    </button>
+                    
+                    <!-- Slide Indicators -->
+                    <div class="slide-indicators"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Auto slideshow for reviews Section -->
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="header-decoration">
+                    <div class="red-line"></div>
+                    <div class="black-line"></div>
+                </div>
+                <h2 class="section-title">Recensioner</h2>
+                <div class="header-decoration">
+                    <div class="black-line"></div>
+                    <div class="red-line"></div>
+                </div>
+            </div>
+            <p class="section-subtitle">Se vad våra kunder säger om oss – pålitlighet, kvalitet och nöjda resultat.</p>
+
+        <div class="auto-slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/recension1.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/recension2.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/recension3.png" style="width:100%">
+            </div>
+
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+
+
+
+
+
+        <div class="instagram-embed-wrapper">
+            <div class="instagram-header-container">
+                <h3 class="instagram-header-new">Följ oss på Instagram</h3>
+            </div>
+            
+            <div class="instagram-iframe-container">
+                <iframe src="https://www.instagram.com/byggare.christensen/embed" 
+                        allowtransparency="true" 
+                        frameborder="0"
+                        scrolling="yes" 
+                        style="width:100%; height:600px;"
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <h2 class="footer-title">BYGGARE J CHRISTENSEN AB</h2>
+            <p class="footer-description">
+                Din pålitliga byggpartner i Stockholm. Vi erbjuder totalrenovering, badrum och entreprenad med högsta kvalitet och professionalism.
+            </p>
+            <button class="footer_button" onclick="goHome()">Hem</button>
+            <button class="footer_button" onclick="goAboutUs()">Om oss</button>
+            <button class="footer_button" onclick="goContact()">Kontakt</button>
+            <div class="footer-links">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/dinbyggare/?locale=sv_SE" class="fa fa-facebook" target="_blank"></a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/byggare.christensen/?hl=en" class="fa fa-instagram" target="_blank"></a>
+            </div>
+        </footer>
+
+
+
 
 
         
-        <script src="script.js"></script>
     </body>
 </html>
