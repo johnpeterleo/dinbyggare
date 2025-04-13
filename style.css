@@ -203,7 +203,7 @@ h1 {
 
   @media (max-width: 500px) {
     .services-intro::before {
-        margin-top: -2px;
+        margin-top: -4px;
     }
   }
   
