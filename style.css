@@ -182,30 +182,35 @@ h1 {
 
 /* Services Intro Section  */
 .services-intro {
-    margin-top: -5px; /*move section up to the front image*/
+    margin-top: -5px; 
     background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(50,50,50,0.9) 100%);
     padding: 80px 20px;
     text-align: center;
     color: white;
     position: relative;
     overflow: hidden;
+    border-top: 1px solid transparent;
   }
   
   .services-intro::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, #c71313, #8a0d0d);
+    z-index: 2;
   }
-
   @media (max-width: 500px) {
-    .services-intro::before {
-        margin-top: -4px;
+    .services-intro {
+        margin-top: -1px; 
     }
-  }
+    .services-intro::before {
+        top: -2px; 
+        height: 5px; 
+    }
+}
   
   .services-content {
     max-width: 1000px;
