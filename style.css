@@ -189,28 +189,18 @@ h1 {
     color: white;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid transparent;
   }
   
   .services-intro::before {
     content: '';
     position: absolute;
-    top: -1px;
+    top: 0;
     left: 0;
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, #c71313, #8a0d0d);
-    z-index: 2;
   }
-  @media (max-width: 500px) {
-    .services-intro {
-        margin-top: -1px; 
-    }
-    .services-intro::before {
-        top: -2px; 
-        height: 5px; 
-    }
-}
+
   
   .services-content {
     max-width: 1000px;
