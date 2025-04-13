@@ -1360,7 +1360,8 @@ a.fa:hover {
     border-radius: 12px;
     border: none;
     width: 100%;
-    height: 800px;
+    height: 60vw !important;
+    box-sizing: border-box;
 }
 
 /* Custom Scrollbar for Instagram Content */
@@ -1382,12 +1383,6 @@ a.fa:hover {
 .instagram-iframe-container ::-webkit-scrollbar-thumb:hover {
     background: #bbb;
 }
-
-
-
-
-
-
 
 
 
