@@ -607,7 +607,7 @@ h1 {
 }
 
 .slideshow-track {
-    height: 700px; /* Fixed height */
+    height: 741px; /* Fixed height */
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -886,6 +886,9 @@ a.fa:hover {
     text-decoration: none; /* Remove underline on hover as well */
 }
 
+.footer-copyright a:hover {
+    opacity: 0.8;  
+  }
 
 
 .contact-info {

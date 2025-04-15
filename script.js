@@ -42,13 +42,19 @@ document.addEventListener('DOMContentLoaded', function() {
           { src: 'byggbilder/badrum6.JPEG', title: ''  },
           { src: 'byggbilder/badrum7.JPEG', title: ''  },
           { src: 'byggbilder/badrum8.JPEG', title: ''  },
-          { src: 'byggbilder/badrum9.JPEG', title: ''  }
+          { src: 'byggbilder/badrum9.JPEG', title: ''  },
+          { src: 'byggbilder/badrum_1.png', title: ''  },
+          { src: 'byggbilder/badrum_2.png', title: ''  },
+          { src: 'byggbilder/badrum_3.png', title: ''  }
       ],
       kitchen: [
           { src: 'byggbilder/kök1.jpg', title: ''  },
           { src: 'byggbilder/kök2.jpg', title: ''  },
           { src: 'byggbilder/kök3.JPEG', title: ''  },
-          { src: 'byggbilder/kökNy1.png', title: ''  }
+          { src: 'byggbilder/kökNy1.png', title: ''  },
+          { src: 'byggbilder/kök_1.png', title: ''  },
+          { src: 'byggbilder/kök_2.png', title: ''  },
+          { src: 'byggbilder/kök_3.png', title: ''  }
       ],
       interior: [
           { src: 'byggbilder/inredning1.jpg', title: ''  },
@@ -58,12 +64,24 @@ document.addEventListener('DOMContentLoaded', function() {
           { src: 'byggbilder/inredningNy1.png', title: ''  },
           { src: 'byggbilder/inredningNy2.png', title: ''  },
           { src: 'byggbilder/dörr1.jpg', title: ''  },
-          { src: 'byggbilder/dörr2.jpg', title: ''  }
+          { src: 'byggbilder/dörr2.jpg', title: ''  },
+          { src: 'byggbilder/inredning_1.png', title: ''  },
+          { src: 'byggbilder/inredning_2.png', title: ''  },
+          { src: 'byggbilder/inredning_1_1.png', title: ''  },
+          { src: 'byggbilder/inredning_3.png', title: ''  },
+          { src: 'byggbilder/inredning_4.png', title: ''  }
       ],
       balcony: [
           { src: 'byggbilder/altan1.jpg', title: ''  },
           { src: 'byggbilder/altan2.JPEG', title: ''  },
-          { src: 'byggbilder/altan3.JPEG', title: ''  }
+          { src: 'byggbilder/altan3.JPEG', title: ''  },
+          { src: 'byggbilder/altan_1.png', title: ''  },
+          { src: 'byggbilder/altan_2.png', title: ''  },
+          { src: 'byggbilder/altan_3.png', title: ''  },
+          { src: 'byggbilder/altan_4.png', title: ''  },
+          { src: 'byggbilder/altan_5.png', title: ''  },
+          { src: 'byggbilder/altan_6.png', title: ''  },
+          { src: 'byggbilder/altan_7.png', title: ''  }
       ],
       carpentry: [
           { src: 'byggbilder/snickeri1.jpg', title: ''  },
@@ -91,9 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
           { src: 'byggbilder/golv1.jpg', title: ''  },
           { src: 'byggbilder/golv2.jpg', title: ''  },
           { src: 'byggbilder/golv3.JPEG', title: ''  },
-          { src: 'byggbilder/golv4.JPEG', title: ''  }
+          { src: 'byggbilder/golv4.JPEG', title: ''  },
+          { src: 'byggbilder/golv_1.png', title: ''  }
       ],
       window: [
+          { src: 'byggbilder/fönster_11.png', title: ''  },
           { src: 'byggbilder/fönsterbyte1.jpg', title: ''  },
           { src: 'byggbilder/dörr3.JPEG', title: ''  },
           { src: 'byggbilder/dörr4.JPEG', title: ''  },
@@ -102,7 +122,17 @@ document.addEventListener('DOMContentLoaded', function() {
           { src: 'byggbilder/ytterdörr2.png', title: ''  },
           { src: 'byggbilder/fönsterNy1.png', title: ''  }
           
-      ]
+      ],
+      outside: [
+        { src: 'byggbilder/utemiljö_1_1.png', title: ''  },
+        { src: 'byggbilder/utemiljö5.png', title: ''  },
+        { src: 'byggbilder/utemiljö6.png', title: ''  },
+        { src: 'byggbilder/utemiljö1.png', title: ''  },
+        { src: 'byggbilder/utemiljö2.png', title: ''  },
+        { src: 'byggbilder/utemiljö3.png', title: ''  },
+        { src: 'byggbilder/utemiljö4.png', title: ''  }
+        
+    ]
   };
   
   // DOM Elements
