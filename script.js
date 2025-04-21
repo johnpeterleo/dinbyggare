@@ -133,7 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
           { src: 'byggbilder/ytterdörr1.png', title: ''  },
           { src: 'byggbilder/ytterdörr2.png', title: ''  },
           { src: 'byggbilder/fönsterNy1.png', title: ''  },
-          { src: 'byggbilder/dörrA1.png', title: ''  }
+          { src: 'byggbilder/dörrA1.png', title: ''  },
+          { src: 'byggbilder/fönsterA22.png', title: ''  }
           
       ],
       outside: [
