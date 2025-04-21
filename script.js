@@ -18,7 +18,7 @@ function goAboutUs() {
 //Functions for slideshow
 // Slideshow functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Sample image data - replace with your actual images
+  // image data 
   const imageData = {
       bathroom: [
           { src: 'byggbilder/badrumNy1.png', title: '' },
@@ -45,7 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
           { src: 'byggbilder/badrum9.JPEG', title: ''  },
           { src: 'byggbilder/badrum_1.png', title: ''  },
           { src: 'byggbilder/badrum_2.png', title: ''  },
-          { src: 'byggbilder/badrum_3.png', title: ''  }
+          { src: 'byggbilder/badrum_3.png', title: ''  },
+          { src: 'byggbilder/badrumA1.png', title: ''  },
+          { src: 'byggbilder/badrumA2.png', title: ''  },
+          { src: 'byggbilder/badrumA3.png', title: ''  },
+          { src: 'byggbilder/badrumA4.png', title: ''  },
+          { src: 'byggbilder/badrumA5.png', title: ''  }
+
       ],
       kitchen: [
           { src: 'byggbilder/kök1.jpg', title: ''  },
@@ -87,7 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
           { src: 'byggbilder/snickeri1.jpg', title: ''  },
           { src: 'byggbilder/snickeri2.jpg', title: ''  },
           { src: 'byggbilder/snickeri3.JPEG', title: ''  },
-          { src: 'byggbilder/snickeri4.JPEG', title: ''  }
+          { src: 'byggbilder/snickeri4.JPEG', title: ''  },
+          { src: 'byggbilder/snickeriA1.png', title: ''  },
+          { src: 'byggbilder/snickeriA2.png', title: ''  },
+          { src: 'byggbilder/snickeriA3.png', title: ''  }
       ],
       renovation: [
           { src: 'byggbilder/totalrenovering1.jpg', title: ''  },
@@ -103,14 +112,17 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: 'byggbilder/ombyggnaderNy2.png', title: ''  },
         { src: 'byggbilder/ombyggnaderNy3.png', title: ''  },
           { src: 'byggbilder/ombyggnaderNy1.png', title: ''  },
-          { src: 'byggbilder/ombyggnader1.jpg', title: ''  }
+          { src: 'byggbilder/ombyggnader1.jpg', title: ''  },
+          { src: 'byggbilder/ombyggnadA1.png', title: ''  }
       ],
       flooring: [
           { src: 'byggbilder/golv1.jpg', title: ''  },
           { src: 'byggbilder/golv2.jpg', title: ''  },
           { src: 'byggbilder/golv3.JPEG', title: ''  },
           { src: 'byggbilder/golv4.JPEG', title: ''  },
-          { src: 'byggbilder/golv_1.png', title: ''  }
+          { src: 'byggbilder/golv_1.png', title: ''  },
+          { src: 'byggbilder/golvA1.png', title: ''  },
+          { src: 'byggbilder/golvA2.png', title: ''  }
       ],
       window: [
           { src: 'byggbilder/fönster_11.png', title: ''  },
@@ -120,7 +132,8 @@ document.addEventListener('DOMContentLoaded', function() {
           { src: 'byggbilder/dörr5.JPEG', title: ''  },
           { src: 'byggbilder/ytterdörr1.png', title: ''  },
           { src: 'byggbilder/ytterdörr2.png', title: ''  },
-          { src: 'byggbilder/fönsterNy1.png', title: ''  }
+          { src: 'byggbilder/fönsterNy1.png', title: ''  },
+          { src: 'byggbilder/dörrA1.png', title: ''  }
           
       ],
       outside: [
@@ -170,9 +183,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const img = document.createElement('img');
         img.src = image.src;
         img.alt = image.title;
-        img.loading = "lazy"; // Add lazy loading
+        img.loading = "lazy"; // lazy loading
         
-        // Add error handling for images
+        // error handling for images
         img.onerror = function() {
             this.style.display = 'none';
             const errorPlaceholder = document.createElement('div');
@@ -207,11 +220,18 @@ document.addEventListener('DOMContentLoaded', function() {
 }
   
   // Start automatic slideshow
+  let lastSlideChangeTime = 0; // Track when last slide change occurred
+  const SLIDE_INTERVAL = 8000;
   function startSlideShow() {
-      clearInterval(slideInterval);
+      clearInterval(slideInterval); //kill existing timer
+      lastSlideChangeTime = Date.now();
       slideInterval = setInterval(() => {
-          nextSlide();
-      }, 5000);
+        // Only advance if full interval has elapsed since last change
+        if (Date.now() - lastSlideChangeTime >= SLIDE_INTERVAL) {
+            nextSlide();
+            lastSlideChangeTime = Date.now(); // Reset tracking
+        }
+    }, SLIDE_INTERVAL);
   }
   
   // Go to specific slide
